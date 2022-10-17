@@ -1,6 +1,6 @@
 function solution(a, arr) {
   let sumL = 0;
-  let sumF = 0;
+  let sumR = 0;
   let n = a / 2;
   if (a % 2 != 0) {
     n += 1 / 2;
@@ -8,9 +8,9 @@ function solution(a, arr) {
   for (let i = 0; i < n; i++) {
     sumL += arr[i];
   }
-  for (let i = a - 1; i >= n; i--) [(sumF += arr[i])];
+  for (let i = a - 1; i >= n; i--) [(sumR += arr[i])];
 
-  return sumL == sumF ? 1 : 0;
+  return sumL == sumR ? 1 : 0;
 }
 
 let a = 5;

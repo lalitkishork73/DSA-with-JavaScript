@@ -1,3 +1,5 @@
+/*  */
+
 function solution(a, arr) {
   let sumL = 0;
   let sumF = 0;
@@ -14,7 +16,7 @@ function solution(a, arr) {
 }
 
 let a = 5;
-let b = [1, 0, 2, 2, 1];
+let b = [1, 1, 2, 2, 1];
 
 let res = solution(a, b);
 console.log(res);
