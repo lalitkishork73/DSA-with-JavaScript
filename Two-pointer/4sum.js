@@ -23,24 +23,28 @@ function fourSome(arr, t) {
   let sum = 0;
   let res = [];
   for (let i = 0; i < arr.length - 3; i++) {
-    let ptr1 = i + 1,
-      ptr2 = arr.length - 2,
-      ptr3 = arr.length - 1;
-    if (arr[i] == arr[i - 1] || arr[ptr3] == arr[ptr3 + 1]) {
+    if (arr[i] == arr[i - 1]) {
       continue;
     }
-    while (ptr1 < ptr3) {
-      sum = arr[i] + arr[ptr1] + arr[ptr2] + arr[ptr3];
-      if (sum == t) {
-        res.push([arr[i], arr[ptr1++], arr[ptr2--], arr[ptr3--]]);
+    for (let j = i + 1; j < arr.length - 2; j++) {
+      if (arr[j] == arr[j - 1]) {
+        continue;
       }
-      if (sum > t) {
-        ptr2--;
-      } else {
-        ptr1++;
+      let tSum = t - (arr[i] - arr[j]);
+
+      let ptr1 = j + 1,
+        ptr2 = arr.length - 1;
+      while (ptr1 < ptr2) {
+        if (arr[ptr1] + arr[ptr2] == tSum) {
+          res.push([arr[i], arr[j], arr[ptr1++], arr[ptr2--]]);
+        }
+        if (arr[ptr1] + arr[ptr2] < tSum) {
+          ptr1++;
+        } else {
+          ptr2--;
+        }
       }
     }
-    ptr3--;
   }
   return res;
 }
