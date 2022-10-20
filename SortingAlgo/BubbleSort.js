@@ -24,13 +24,7 @@ function BubbleSort(arr, o) {
 }
 
 function BubbleSortOptimiz(arr, o) {
-    let i=0,n=arr.length,j=i+1;
-    while(i<n && j<n){
-        if(arr[i]>arr[j]){
-            swapA(arr,i,j);
-            j++;
-        }
-    }
+   
     return arr
 }
 
