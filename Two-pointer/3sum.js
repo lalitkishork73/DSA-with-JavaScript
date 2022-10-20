@@ -12,15 +12,15 @@ function ThreeSum(arr) {
       r = arr.length - 1;
     while (l < r) {
       if (arr[l] + arr[r] === target) {
-        Trep.push([arr[l], -target, arr[r]]);
-        while (arr[l] === arr[l + 1]) {
+        Trep.push([arr[l++], -target, arr[r--]]);
+        /*  while (arr[l] === arr[l + 1]) {
           l++;
         }
         l++;
         while (arr[r] === arr[r - 1]) {
           r--;
         }
-        r--;
+        r--; */
       } else if (arr[l] + arr[r] > target) {
         r--;
       } else {
