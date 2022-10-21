@@ -7,9 +7,11 @@ const swapA = (arr, i, j) => {
 };
 
 const swapAT = (arr, i, j) => {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
+  let charArray = arr.split("");
+  let temp = charArray[i];
+  charArray[i] = charArray[j];
+  charArray[j] = temp;
+  return charArray.join("");  
 };
 const swapT = (i, j) => {
   let temp = i;
