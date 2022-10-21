@@ -13,6 +13,7 @@ function quicksort(array) {
   }
 
   return quicksort(left).concat(pivot, quicksort(right));
+  //return [...quicksort(left), pivot, ...quicksort(right)];
 }
 
 let arr = [1, 22, 4, 51, 66, 28, 44, 14, 23, 56, 79];
