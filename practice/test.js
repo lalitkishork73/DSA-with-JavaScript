@@ -1,24 +1,37 @@
-let arr = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+//merge sorts
 
-function Container(arr) {
-  let l = 0,
-    r = arr.length - 1,
-    max = Number.MIN_VALUE;
-  while (l < r) {
-    let ls = arr[l],
-      rs = arr[r];
-      let min = Math.min(ls, rs);
-      let len = r - l;
-      let area=min*len;
-      max=Math.max(max,area);
-
-      if(ls<rs){
-        l++;
-      }
-      else{
-        r--;
-      } 
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
   }
-  return max;
+
+  let mid = Math.floor(arr.length / 2),
+    leftA = arr.slice(0, mid),
+    rightA = arr.slice(mid);
+
+  return merge(mergeSort(leftA), mergeSort(rightA));
 }
-console.log(Container(arr));
+
+function merge(leftA, rightA) {
+  let i = 0,
+    j = 0,
+    res = [];
+  let l = leftA.length,
+    r = rightA.length;
+  while (i < l || j < r) {
+    if (i === l) {
+      res.push(rightA[j]);
+      j++;
+    } else if (j === r || leftA[i] <= rightA[j]) {
+      res.push(leftA[i]);
+      i++;
+    } else {
+      res.push(rightA[j]);
+      j++;
+    }
+  }
+  return res;
+}
+
+let arr = [1, 22, 4, 51, 66, 28, 44, 14, 23, 56, 79];
+console.log(mergeSort(arr));

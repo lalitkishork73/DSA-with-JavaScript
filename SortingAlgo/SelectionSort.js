@@ -1,4 +1,4 @@
-const {swapAT}=require("../swapFunc/swap.js")
+const { swapA } = require("../swapFunc/swap.js");
 
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -11,7 +11,7 @@ function selectionSort(arr) {
       }
     }
     //swap
-    swapAT(arr,i,minptr)
+    swapA(arr, i, minptr);
   }
   return arr;
 }

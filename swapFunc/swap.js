@@ -11,7 +11,7 @@ const swapAT = (arr, i, j) => {
   let temp = charArray[i];
   charArray[i] = charArray[j];
   charArray[j] = temp;
-  return charArray.join("");  
+  return charArray.join("");
 };
 const swapT = (i, j) => {
   let temp = i;
