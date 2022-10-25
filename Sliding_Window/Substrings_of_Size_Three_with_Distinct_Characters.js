@@ -1,22 +1,24 @@
 let s = "xyzzaz";
 
 function SubString(s){
-      s.split(" ").map(String);
-      let count=0,sum=0,i=0,j=s.length;
-      let map=new Map();
-      let st=[];
-      while(i<3){
-        // map.set(s[i],map.get(s[i])+1||1);
-        // let c=map;
-        
-
-        ;
-        i++;
+  let result = 0;
+  let split = s.split("")
+  let right = 0;
+  let temp = [];
+  
+  while(right < split.length){
+      
+      temp.push(split[right])
+      
+      if(temp.length === 3){
+          if(temp.indexOf(temp[0]) === temp.lastIndexOf(temp[0]) && temp.indexOf(temp[1]) === temp.lastIndexOf(temp[1])){
+              result++;
+          }
+          temp.shift();
       }
-      if(sum==3){
-        count++;
-      }
-      return s
+      right++;
+  }
+  return result
       
 }
 
