@@ -1,5 +1,4 @@
-let arr = [1, 2, 3],
-  k = 2;
+let arr = [1,3,-1,-3,5,3,6,7], k = 3;
 
 function maxSumSubArrBrut(arr, k) {
   let maxSum = 0;
@@ -19,9 +18,10 @@ console.log(maxSumSubArrBrut(arr, k));
 
 function maxSumSubArr(arr, k) {
   let i = 0,l=arr.length;
-  while (i < l) {
-    console.log(arr[i]);
-    i++
+  
+  while (i < k) {
+    
+    i++;
 
   }
 }

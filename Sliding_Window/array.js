@@ -14,6 +14,4 @@ for (let i = 0; i <m; i++) {
   data2.push(data1[i]);
 }
 
-console.log(data2.sort((a,b)=>a-b));
 console.log([...data, ...data1].sort((a, b) => a - b));
-console.log(lolo);
