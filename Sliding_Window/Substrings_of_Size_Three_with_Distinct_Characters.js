@@ -1,4 +1,4 @@
-let s = "xyzzaz";
+let s = "aababcabc";
 
 function SubString(s){
   let result = 0;
