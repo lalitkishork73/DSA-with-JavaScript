@@ -7,11 +7,6 @@ let m=data1.length;
 let lolo={};
 
 
-for (let i = 0; i <l; i++) {
-  data2.push(data[i]);
-}
-for (let i = 0; i <m; i++) {
-  data2.push(data1[i]);
-}
+
 
 console.log([...data, ...data1].sort((a, b) => a - b));
