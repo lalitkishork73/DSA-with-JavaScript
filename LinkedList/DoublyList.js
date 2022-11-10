@@ -39,7 +39,7 @@ class DoublyLinkedList {
         this.tail=newNode;
         this.previous = this.tail;
         this.length++;
-        this.printList();
+          this.printList();
     }
     // Insert node at end of the list
     append(value) {
