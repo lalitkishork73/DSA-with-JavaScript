@@ -1,4 +1,4 @@
-//DEff:1==> A Closer is a function having access to the parent scope. it preserve the data from outside.
+/* //DEff:1==> A Closer is a function having access to the parent scope. it preserve the data from outside.
 
 var i=10;
 function show(){
@@ -27,3 +27,7 @@ function Outer(){
 }
 
 Outer();
+ */
+
+
+
