@@ -31,3 +31,25 @@ Outer();
 
 
 
+function outer(){
+    let set=5;
+    return function test() {
+        let a = 5;
+        
+        function inner() {
+            a = 2
+            return a*set;
+        }
+
+        return inner()*a
+    }
+    
+}
+let test = outer()
+let b=test()
+
+console.dir(test())
+console.dir(b)
+
+
+
