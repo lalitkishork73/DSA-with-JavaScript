@@ -51,5 +51,10 @@ let b=test()
 console.dir(test())
 console.dir(b)
 
+function test2(){
+    console.log("girnar")
+}
+
+test2()
 
 
