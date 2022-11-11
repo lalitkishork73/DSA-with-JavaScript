@@ -33,12 +33,12 @@ Outer();
 
 function outer(){
     let set=5;
-    return function test() {
+    return function test(c) {
         let a = 5;
         
         function inner() {
             a = 2
-            return a*set;
+            return a*set*c;
         }
 
         return inner()*a
@@ -51,10 +51,11 @@ let b=test()
 console.dir(test())
 console.dir(b)
 
-function test2(){
+function test2(a,callback){
     console.log("girnar")
+    callback(a);
 }
 
-test2()
+test2(5,test)
 
 
