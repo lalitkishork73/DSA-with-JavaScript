@@ -1,33 +1,36 @@
-html{
-    margin:0;
-    padding: 0;
 
-}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
+    margin:0;
+    padding: 0;
 
 }
 
 .container{
-    background-color: aqua;
-    padding: 10%;
+    background-color: rgb(255, 253, 245);
+    padding: 5%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: max-content;
-    height:max-content;
-    border-radius: 12%;
-    box-shadow: 12px 10px 2px 2px rgba(0,11,25,0.8);
+    width: 100%;
+    height:auto;
+
+   
 }
 
-.container:hover{
-    box-shadow: 12px 10px 2px 2px rgba(0, 25, 27, 0.568);
-
+table{
+    border: 2px solid black;
+    width: auto;
+    color:aliceblue;
+    background-color: black;
 }
+tr{
+    
+    border: 2px solid black;
+}
+
 .btn{
     display: flex;
     flex-direction: row;
