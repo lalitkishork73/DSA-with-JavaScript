@@ -12,8 +12,9 @@ mongoose.connect( "mongodb+srv://lalitkishork73:UzPr9bb6Wvxda9eC@cluster0.o2wavx
   useNewUrlParser: true,
 })
 
-app.get('/test',()=>{
+app.get('/test',(req,res)=>{
   console.log('test');
+  return res.status(200).send({status:true, message:"success"});
 })
 
 app.listen(process.env.PORT || port, () => console.log(`connected to Port ${port}`));
