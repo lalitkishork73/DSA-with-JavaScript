@@ -9,19 +9,19 @@ const url = process.env.MONGOLAB_URI;
 
 const mysql = require('mysql');
 const connect = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Lalit@33cool",
-    database: "lalit"
+  host: "localhost",
+  user: "root",
+  password: process.env.PASSWORD,
+  database: "lalit"
 
 })
-  
+
 connect.connect((err) => {
-    if (err) throw err;
-    connect.query("select * from users",(err,result)=>{
-      console.log("data : ",result)
-    })
-    
+  if (err) throw err;
+  connect.query("select * from users", (err, result) => {
+    console.log("data : ", result)
+  })
+
 })
 
 app.use(bodyParser.json());
@@ -31,6 +31,6 @@ console.log(url)
 //     useNewUrlParser: true,
 //   }).then(() => console.log("mongoDB connected successfully")).catch((err) => console.log(err));
 
-app.use('/',route);
+app.use('/', route);
 
 app.listen(process.env.PORT || port, () => console.log(`connected to Port ${process.env.PORT || port}`));
