@@ -15,7 +15,7 @@ const connect = mysql.createConnection({
     database: "lalit"
 
 })
-
+  
 connect.connect((err) => {
     if (err) throw err;
     connect.query("select * from users",(err,result)=>{
