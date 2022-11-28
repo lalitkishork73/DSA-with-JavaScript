@@ -86,38 +86,70 @@ let data = [
 
 
 //Method 1
+function Fullname() {
 
-function method1() {
-    let res = [];
 
-    data.forEach((e) => {
-        res.push(e.firstname);
-        console.log(e.firstname)
-    })
+    function method1() {
+        let res = [];
 
-    console.log(res)
+        data.forEach((e) => {
+            res.push(e.firstname + " " + e.lastname);
+            console.log(e.firstname)
+        })
+
+        console.log(res)
+    }
+    function method2() {
+
+
+        //this method is not effective in the and we have use of map
+        let res = data.filter((e) => {
+            return e.firstname;
+        }).map((e) => { return e.firstname + " " + e.lastname });
+
+        console.log(res)
+    }
+    function method3() {
+
+        // map is best method
+
+        let res = data.map((e) => {
+            return e.firstname + " " + e.lastname;
+        })
+
+        console.log(res)
+    }
+
+    method1();
+    method2();
+    method3();
 }
-function method2() {
+
+Fullname();
+
+function AverageAge(){
+   
+    let res = data.map((e) => e.age).reduce((a,b)=>a+b,0)/data.length;
+    // let ress=res.reduce((a,b)=>a+b,0)/data.length;
+    
+    console.log(Math.floor(res))
 
 
-    //this method is not effective in the and we have use of map
-    let res = data.filter((e) => {
-        return e.firstname;
-    }).map((e) => { return e.firstname });
-
-    console.log(res)
-}
-function method3() {
-
-    // map is best method
-
-    let res = data.map((e) => {
-        return e.firstname;
-    })
-
-    console.log(res)
 }
 
-method1();
-method2();
-method3();
+AverageAge();
+
+function FemaleNames(){
+   
+    let res = data.filter((e)=>{
+        return e.gender==="female"
+    }).map((e) => e.firstname+ " " + e.lastname)
+    // let ress=res.reduce((a,b)=>a+b,0)/data.length;
+    
+    console.log(res)
+
+
+}
+
+FemaleNames();
+
