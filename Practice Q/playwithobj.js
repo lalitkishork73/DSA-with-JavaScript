@@ -35,14 +35,14 @@ let data = [
         age: 28
     },
     {
-        firstname: "lina",
-        lastname: "godbole",
+        firstname: "rosalia",
+        lastname: "a",
         gender: "female",
         age: 22
     },
     {
-        firstname: "disha",
-        lastname: "kathane",
+        firstname: "dua",
+        lastname: "lipa",
         gender: "female",
         age: 25
     },
