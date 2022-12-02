@@ -12,7 +12,7 @@
 
 function solution(S1, S2) {
   let flag = false;
-  for (let i = 0; i < S1.length-S2.length+1; i++) {
+  for (let i = 0; i < S1.length - S2.length + 1; i++) {
     flag = true;
     for (let j = 0; j < S2.length; j++) {
       if (S1[i + j] != S2[j]) {
@@ -26,4 +26,4 @@ function solution(S1, S2) {
   }
   return -1;
 }
- console.log(solution("chetan good code", "code"));
+console.log(solution("chetan good code", "code"));

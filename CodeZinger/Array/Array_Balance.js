@@ -11,7 +11,7 @@ function solution(a, arr) {
   let sumLeft = 0;
   let sumRight = 0;
   let n = a / 2;
-//   console.log(n)
+  //   console.log(n)
   if (a % 2 != 0) {
     n += 1 / 2;
     // console.log(n)
