@@ -13,7 +13,7 @@ for (let i in arr) {
 }
 
 for(let [key,value] of myMap){
-    if(value==3){   
+    if(value==1){   
         count++;
     }
 }
