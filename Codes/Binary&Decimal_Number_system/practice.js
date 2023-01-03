@@ -1,4 +1,4 @@
-let n = 6;
+let n = 600001;
 let ans = 0;
 let i = 0;
 
