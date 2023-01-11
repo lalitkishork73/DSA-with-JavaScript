@@ -1,0 +1,23 @@
+{
+  "name": "dsa-with-javascript",
+  "version": "1.0.0",
+  "description": "All about DSA default language is  Javascript",
+  "main": "Check whether a given integer is power of 2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalitkishork73/DSA-with-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lalitkishork73/DSA-with-JavaScript/issues"
+  },
+  "homepage": "https://github.com/lalitkishork73/DSA-with-JavaScript#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
