@@ -9,6 +9,7 @@ console.log(ans);
 let res = ans.reduce((result, current) => {
     // Split the current key-value pair into key and value
     const [key, value] = current.split("-");
+    console.log(key, value);
 
     // Add the key-value pair to the result object
     result[value.trim()] = key.trim();
