@@ -74,3 +74,14 @@
     const result = longestFlatLine(A, B);
     console.log(result);
 }
+
+{
+    let map = {}
+    let b = [1, 2, 6, 8, 44, 7, 2, 2, 1, 6, 9]
+    b.sort(a,b=>a-b)
+    for (let i = 0; i < b.length; i++) {
+        map[b[i]] = (map[b[i]] || 0) + 1;
+
+    }
+    console.log(map)
+}
