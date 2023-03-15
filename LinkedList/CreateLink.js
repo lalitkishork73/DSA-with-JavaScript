@@ -35,8 +35,9 @@ const newData = new LinkedList(2);
 let arr = [1, 2, 5, 68, 96, 3]
 
 let i = 0;
-while (i < arr.length - 1) {
+while (i < arr.length) {
     newData.add(arr[i])
+    console.log(i)
     i++;
 }
 
