@@ -18,9 +18,18 @@ class LinkedList {
         this.length++;
     }
 
-    insertStart(data){
-        
+   
+  insertStart(data) {
+    const newNode = {
+      data: data,
+      next: this.head
+    };
+    this.head = newNode;
+    if (!this.tail) {
+      this.tail = newNode;
     }
+    this.length++;
+  }
 
     print() {
         const array = []
@@ -35,21 +44,17 @@ class LinkedList {
 }
 
 
-const newData = new LinkedList(2);
 
 let arr = [1, 2, 5, 68, 96, 3]
-newData.add(9)
-newData.add(5)
-newData.add(7)
-newData.add(9)
-
-let i = 0;
+const newData = new LinkedList(arr[0]);
+let i = 1;
 while (i < arr.length) {
     newData.add(arr[i])
     console.log(i)
     i++;
 }
 
+newData.insertStart(5)
 console.log(newData.print());
 
 
