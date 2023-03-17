@@ -13,8 +13,13 @@ class LinkedList {
             data: data,
             next: null
         }
-        this.tail.next = newNode
-        this.length++
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+    }
+
+    insertStart(data){
+        
     }
 
     print() {
@@ -33,6 +38,10 @@ class LinkedList {
 const newData = new LinkedList(2);
 
 let arr = [1, 2, 5, 68, 96, 3]
+newData.add(9)
+newData.add(5)
+newData.add(7)
+newData.add(9)
 
 let i = 0;
 while (i < arr.length) {
