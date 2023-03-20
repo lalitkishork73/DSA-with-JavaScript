@@ -18,18 +18,31 @@ class LinkedList {
         this.length++;
     }
 
-   
-  insertStart(data) {
-    const newNode = {
-      data: data,
-      next: this.head
-    };
-    this.head = newNode;
-    if (!this.tail) {
-      this.tail = newNode;
+
+    insertStart(data) {
+        const newNode = {
+            data: data,
+            next: this.head
+        };
+        this.head = newNode;
+        if (!this.tail) {
+            this.tail = newNode;
+        }
+        this.length++;
     }
-    this.length++;
-  }
+
+    insertBetween(preIndex, data, nextIndex) {
+        const newNode = {
+            data: data,
+            next: nextIndex
+        }
+        preIndex.next = newNode;
+        if (prevNode === this.tail) {
+            this.tail = newNode;
+        }
+        this.length++;
+
+    }
 
     print() {
         const array = []
@@ -55,6 +68,7 @@ while (i < arr.length) {
 }
 
 newData.insertStart(5)
+newData.insertBetween(newData.head,4,)
 console.log(newData.print());
 
 
