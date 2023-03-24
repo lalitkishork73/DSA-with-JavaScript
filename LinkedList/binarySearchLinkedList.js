@@ -26,6 +26,8 @@ class LinkedList {
         this.length++;
     }
 
+
+
     getData() {
         let newNode = this.head;
         while (newNode !== null) {
@@ -33,16 +35,47 @@ class LinkedList {
             newNode = newNode.next;
         }
     }
+
+    getNodeAtIndex(index) {
+        let currentNode = this.head;
+        let currentIndex = 0;
+        while (currentNode && currentIndex < index) {
+            currentNode = this.head;
+            currentIndex++;
+        }
+        return currentNode;
+    }
+
+    BinarySearch(data) {
+        let left = 0;
+        let right = this.length - 1;
+        while (left <= right) {
+            let mid = left + (right - left) / 2;
+            console.log(mid)
+            let currentNode = this.getNodeAtIndex(mid);
+            if (currentNode === data) {
+                return true;
+            }
+            else if (currentNode > data) {
+                right = mid - 1;
+            }
+            else {
+                left = mid + 1;
+            }
+        }
+        return false;
+    }
 }
 
 let Nod = new LinkedList()
 
-let data = [1, 5, 8, 9, 6, 3, 4, 8, 5, 6], i = 0;
+let data = [1, 3, 4, 5, 6, 8, 9], i = 0;
 
 while (i < data.length) {
     Nod.push(data[i++]);
 }
 
+console.log(Nod.BinarySearch(4))
 
-Nod.getData();
+// Nod.getData();
 
