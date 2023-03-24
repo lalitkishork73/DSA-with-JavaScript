@@ -31,7 +31,7 @@ class LinkedList {
 
 
 let arr = [1, 5, 9, 7, 5, 63, 4, 2];
-
+let k=5;
 let Nodes = new LinkedList(arr[0]);
 
 let i = 1;
@@ -40,3 +40,7 @@ while (i < arr.length) {
 }
 
 console.log(Nodes.print());
+
+
+
+
