@@ -69,7 +69,7 @@ class LinkedList {
 
 let Nod = new LinkedList()
 
-let data = [1, 3, 4, 5, 6, 8, 9], i = 0;
+let data = [1, 3, 4, 5, 6, 8, 9,10,12,15,13], i = 0;
 
 while (i < data.length) {
     Nod.push(data[i++]);
