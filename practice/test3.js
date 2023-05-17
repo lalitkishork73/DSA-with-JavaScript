@@ -4,8 +4,6 @@ let b=array.filter((k)=>{
     return k>2;
 });
 
-let a=array.map((obj)=>{
-    return obj==2;
-})
+let a=array.map(String)
 // console.log(b);
 console.log(a);
