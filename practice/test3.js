@@ -27,7 +27,7 @@ for(let i=1;i<=n;i++){
     for(let j=1;j<=i -1;j++){
         str+=' ';
     }
-    for(let k=i;k<=2*n-1;k++){
+    for(let k=i;k<=(2*n-1);k++){
         str+='*';
     }
     str+='\n'
