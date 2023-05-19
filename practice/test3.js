@@ -33,7 +33,7 @@ let k=arr.map((e)=>{
 let map={}
 
 for(let i=0;i<arr.length;i++){
-    map[arr[i]]=map[arr[i]]+1||0;
+    map[arr[i]]=map[arr[i]]+1||1;
 }
 
 console.log(map);
