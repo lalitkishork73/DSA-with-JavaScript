@@ -21,16 +21,19 @@
 // }
 
 // vector(mono);
-let n=5;
-let str=''
-for(let i=1;i<=n;i++){
-    for(let j=1;j<=i -1;j++){
-        str+=' ';
-    }
-    for(let k=i;k<=(2*n-1);k++){
-        str+='*';
-    }
-    str+='\n'
+
+
+let arr=[2,5,6,9,8,5,23,1,5,1];
+
+
+let k=arr.map((e)=>{
+    return e;
+})
+
+let map={}
+
+for(let i=0;i<arr.length;i++){
+    map[arr[i]]=map[arr[i]]+1||0;
 }
 
-console.log(str);
+console.log(map);
