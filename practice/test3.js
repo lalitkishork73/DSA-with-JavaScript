@@ -58,39 +58,16 @@
 //     console.log(str)
 // }
 
-    
+     
 let s='abbsadadef'
 
-const uniqueChars = [...new Set(s)];
-let maxLength = 0;
+let b=[]
 
-  // Iterate through all possible pairs of characters
-  for (let i = 0; i < uniqueChars.length - 1; i++) {
-    for (let j = i + 1; j < uniqueChars.length; j++) {
-      const char1 = uniqueChars[i];
-      const char2 = uniqueChars[j];
-      let prevChar = '';
-      let count = 0;
-      let isValid = true;
-
-      // Iterate through the string and count the valid characters
-      for (let k = 0; k < s.length; k++) {
-        const currentChar = s[k];
-        if (currentChar === char1 || currentChar === char2) {
-          if (currentChar === prevChar) {
-            isValid = false;
-            break;
-          }
-          count++;
-          prevChar = currentChar;
-        }
-      }
-
-      // Update the maximum length if the current pair produces a longer valid string
-      if (isValid && count > maxLength) {
-        maxLength = count;
-      }
-    }
+for(let i=0;i<s.length;i++){
+  if(!b.includes(s[i])){
+    b.push(s[i]);
   }
+}
 
-  console.log(maxLength);
+
+console.log(b);
