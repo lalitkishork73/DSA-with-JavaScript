@@ -23,17 +23,27 @@
 // vector(mono);
 
 
-let arr=[2,5,6,9,8,5,23,1,5,1];
+// let arr=[2,5,6,9,8,5,23,1,5,1];
 
+// let k=arr.map((e)=>{
+//     return e;
+// })
 
-let k=arr.map((e)=>{
-    return e;
-})
+// let map={}
 
-let map={}
+// for(let i=0;i<arr.length;i++){
+//     map[arr[i]]=map[arr[i]]+1||1;
+// }
 
-for(let i=0;i<arr.length;i++){
-    map[arr[i]]=map[arr[i]]+1||1;
+// console.log(map);
+let rows=5
+for(let i=1;i<=rows;i++){
+    let str=''
+    for(let j=1;j<=rows-i;j++){
+        str+=' '
+    }
+    for(let k=1;k<=i;k++){
+        str+='* ';
+    }
+    console.log(str)
 }
-
-console.log(map);
