@@ -59,15 +59,17 @@
 // }
 
      
-let s='abbsadadef'
+// let s='abbsadadef'
 
-let b=[]
+// let b=[]
 
-for(let i=0;i<s.length;i++){
-  if(!b.includes(s[i])){
-    b.push(s[i]);
-  }
-}
+// for(let i=0;i<s.length;i++){
+//   if(!b.includes(s[i])){
+//     b.push(s[i]);
+//   }
+// }
 
 
-console.log(b);
+// console.log(b);
+
+
